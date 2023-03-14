@@ -1,0 +1,11 @@
+name: Test secret
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  pass_secret:
+    uses: ./.github/workflows/use-secret.yaml
+    secrets:
+      my-secret: ${{ secrets.SOME_SECRET }}
