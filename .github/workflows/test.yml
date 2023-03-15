@@ -6,6 +6,7 @@ on:
 
 jobs:
   pass_secret:
+    environment: testing
     uses: ./.github/workflows/forward-secret.yaml
     secrets:
-      my-secret: ${{ secrets.SOME_SECRET }}
+      my-secret: ${{ secrets.ENVIRONMENT_SECRET }}
