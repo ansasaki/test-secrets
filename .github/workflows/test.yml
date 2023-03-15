@@ -6,6 +6,6 @@ on:
 
 jobs:
   pass_secret:
-    uses: ./.github/workflows/use-secret.yaml
+    uses: ./.github/workflows/forward-secret.yaml
     secrets:
       my-secret: ${{ secrets.SOME_SECRET }}
